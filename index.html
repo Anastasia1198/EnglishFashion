@@ -1,0 +1,1018 @@
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Английская мода и модельеры</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, sans-serif;
+            object-fit: cover;
+            box-sizing: border-box;
+        }
+
+        #box {
+            width: 100%;
+            height: 1000px;
+            background-color: #15B575;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #box1 {
+            width: 1100px;
+            height: 500px;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Полупрозрачный фон */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center items horizontally */
+            justify-content: center;
+            /* Center items vertically */
+            margin: 0;
+            padding: 0;
+            /* Remove default padding */
+            padding: 100px 0;
+        }
+
+        .menu a {
+            color: #000;
+            text-decoration: none;
+            font-size: 40px;
+            width: 100%;
+            /* Full width for each line */
+            text-align: center;
+            box-sizing: border-box;
+            /* Include padding and border in the element's total width and height */
+            line-height: 1.5;
+        }
+
+
+        /* Линия между первым и вторым пунктом */
+        .menu a:nth-child(1)::after {
+            /* Changed ::before to ::after */
+            content: '';
+            position: absolute;
+            bottom: 340px;
+            /* Adjust as needed to position below the text */
+            left: 50%;
+            /* Center the line */
+            transform: translateX(-50%);
+            /* Correct centering for absolute positioning */
+            width: 700px;
+            max-width: 80%;
+            /* Make line responsive */
+            height: 3px;
+            background-color: #000;
+        }
+
+        #logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        #box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .section_inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+            padding: 80px 0;
+        }
+
+        .section_inner>span {
+            font-family: Verdana;
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .header-left,
+        .header-right {
+            font-size: 30px;
+            margin: 0;
+            /* Убираем лишние отступы */
+        }
+
+        .header-left {
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .header-right {
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        .circle {
+            width: 70px;
+            height: 70px;
+            background-color: rgb(252, 189, 189);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .inner-circle {
+            width: 55px;
+            height: 55px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner-circle1 {
+            width: 47px;
+            height: 47px;
+            background-color: rgb(252, 121, 121);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .number {
+            color: rgb(255, 255, 255);
+            font-size: 22px;
+            /* Увеличенный размер шрифта */
+        }
+
+        /* Новые стили для описания */
+        .description {
+            max-width: 800px;
+            text-align: justify;
+            margin-top: 25px;
+            font-size: 18px;
+            line-height: 1.5;
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px
+        }
+
+        /* Создание стрелки с помощью CSS */
+        .step-container::after {
+            content: '↓';
+            display: block;
+            font-size: 32px;
+            margin-top: 5px;
+        }
+
+        .glava1 {
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kvadrat_moda_container,
+        .kvadrat1_moda1_container,
+        .kvadrat2_moda2_container,
+        .kvadrat3_moda3_container,
+        .kvadrat4_moda4_container {
+            display: flex;
+            align-items: flex-start;
+            /* Изменено на flex-start для лучшего выравнивания */
+            width: 100%;
+            margin-bottom: 20px;
+            /* Отступ между группами */
+        }
+
+        .kvadrat,
+        .kvadrat1,
+        .kvadrat2,
+        .kvadrat3,
+        .kvadrat4 {
+            width: 700px;
+            height: 550px;
+            background-color: rgb(72, 105, 98);
+            position: relative;
+            margin-right: 15px;
+        }
+
+        .kvadrat2 {
+            background-color: rgb(189, 252, 238);
+        }
+
+        .moda,
+        .moda1,
+        .moda2,
+        .moda3,
+        .moda4 {
+            width: 100%;
+            font-size: 18px;
+            line-height: 1.5;
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 530px;
+            padding: 10px;
+            /* Добавлено немного отступа внутри контент-контейнера */
+            text-align: justify;
+        }
+
+        .moda1 {
+            text-align: right;
+            /* Оставлено как есть для правого выравнивания */
+        }
+
+        .zagolovok>span {
+            font-family: Verdana;
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        #ban {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            /* Меняем направление на колонку */
+            align-items: center;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .figure {
+            width: 1100px;
+            height: 600px;
+            background-color: #9aaaa3;
+            margin-bottom: 20px;
+            /* Отступ между фигурой и текстом */
+            position: relative;
+            /* Позиционируем родительский элемент */
+        }
+
+        #foto {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Содержимое изображения занимает всю рамку */
+        }
+
+        .text-block {
+            width: 1100px;
+            /* Такая же ширина, как у фигуры */
+            height: 625px;
+            /* Такая же высота, как у фигуры */
+            padding: 10px;
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.5;
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .zagolovok1>span {
+            font-family: Verdana;
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .glava3 {
+            width: 100%;
+            height: 3300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zagolovok2>span {
+            font-family: Verdana;
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .container-pramoygolniki {
+            display: flex;
+            flex-wrap: wrap;
+            /* Added to allow items to wrap to the next line */
+            width: 1700px;
+            /* Approximate width to control wrapping */
+            justify-content: center;
+            /* center the elements inside */
+
+        }
+
+        .pramoygolniki .pramoygolniki2 {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            margin-right: 15px;
+            margin-bottom: 30px;
+            /* Увеличили отступ снизу */
+            border-radius: 10px;
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            /* Внешний отступ со всех сторон */
+
+        }
+
+        .pramoygolniki1,
+        .pramoygolniki3 {
+            width: 100%;
+            height: 400px;
+            /* Можно увеличить высоту, если текст выходит за пределы */
+            background-color: #ccc;
+            margin-bottom: 10px;
+            margin: 10px;
+            /* Внешний отступ со всех сторон */
+
+        }
+
+        .omg {
+            font-size: 22px;
+            text-align: center;
+            padding: 10px;
+            /* Добавляем отступы сверху и снизу */
+        }
+
+        .omg1 {
+
+            width: 700px;
+            /* Ширина блока */
+            height: 1000px;
+            /* Высота блока */
+            padding: 10px;
+            /* Внутренние отступы */
+            text-align: justify;
+            /* Выравнивание текста по ширине */
+            font-size: 18px;
+            /* Размер шрифта */
+            line-height: 1.5;
+            /* Межстрочный интервал */
+            color: black;
+            /* Цвет текста */
+            background-color: white;
+            /* Цвет фона */
+            border-radius: 5px;
+            /* Закругление углов */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Тень вокруг блока */
+            margin: 10px;
+            /* Внешний отступ со всех сторон */
+        }
+        #opa {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Содержимое изображения занимает всю рамку */
+
+        }
+        #koncovka1 {
+        width: 100%;
+        height: 600px;
+        /* Увеличиваем высоту для размещения koncovka2 */
+        position: relative;
+        /* Relative positioning for absolute positioning of koncovka2 */
+    }
+
+    #logo1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Keep the image aspect ratio */
+    }
+
+    #koncovka2 {
+        width: 80%;
+        /* Adjust width to be a percentage for responsiveness */
+        max-width: 800px;
+        /* Set a maximum width */
+        height: auto;
+        /* Let the height adjust to the content */
+        background-color: rgba(255, 255, 255, 0.5);
+        /* Semi-transparent background */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        padding: 20px;
+        /* Add some padding */
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .menu1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        /* Make the menu take up the full height of koncovka2 */
+    }
+
+    .menu1 a {
+        color: #000;
+        text-decoration: none;
+        font-size: 40px;
+        width: 100%;
+        /* Full width for each line */
+        text-align: center;
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width and height */
+        line-height: 1.5;
+    }
+    #b>span {
+            font-family: Verdana;
+            font-size: 45px;
+            text-align: center;
+            display: block;
+            /* Обеспечивает, что span занимает всю ширину */
+        }
+
+        #a {
+            text-align: center;
+            /* Центрирует содержимое внутри div#a */
+            display: flex;
+            /* Используем flexbox для вертикального выравнивания */
+            flex-direction: column;
+            /* Располагаем дочерние элементы вертикально */
+            align-items: center;
+            /* Выравниваем дочерние элементы горизонтально */
+        }
+
+        #c {
+            max-width: 1100px;
+            /* Ограничиваем максимальную ширину */
+            width: 100%;
+            /* Ширина блока должна адаптироваться под размер экрана */
+            height: auto;
+            /* Высота автоматически подстраивается под контент */
+            padding: 10px;
+            text-align: justify;
+            font-size: 20px;
+            line-height: 1.5;
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            /* Добавляем немного пространства между заголовком и содержимым */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="box">
+            <img id="logo" src="https://media.meer.com/attachments/ba3fb52f876e73d97189b60aa433c8bbe6830266/store/fill/1860/1046/0d6ccd81bf6c0c4f1fa258bb6910ab96eb7a1b7f017dd2949a63747510b5/Charles-James-Ball-Gowns-1948-Courtesy-of-The-Metropolitan-Museum-of-Art-Photograph-by-Cecil.jpg" alt="Английская мода">
+        </div>
+        <div id="box1">
+            <div class="menu">
+                <a href="#">Английская мода и модельеры</a>
+                <a href="#">Для вас старалась студентка группы ИС-5-23:</a>
+                <a href="#">Тарасова Анастасия Сергеевна</a>
+                <a href="#">Руководитель: Крикова Людмила Петровна</a>
+            </div>
+        </div>
+        
+    </header>
+    <div class="glava">
+        <div class="section_inner">
+            <span>О чем мы узнаем по данной теме?</span>
+
+            <!-- Первый шаг -->
+            <div class="step-container">
+                <div class="circle">
+                    <div class="inner-circle">
+                        <div class="inner-circle1">
+                            <span class="number">1</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="header-left">Как мода повлияла на культуру</p>
+                <p class="description">
+                    Английская мода, основанная на королевских традициях, значительно влияет на мировую культуру от
+                    высокой моды до уличной одежды. Она сочетает классическую элегантность с авангардными элементами,
+                    отражая социальные изменения и вдохновляя дизайнеров. Английская мода способствует самоидентификации
+                    через одежду, предлагая разнообразные стили для самовыражения. Ее влияние ощущается в искусстве,
+                    кино, музыке и социальных движениях, оставаясь актуальным и востребованным.
+                </p>
+            </div>
+
+            <!-- Второй шаг -->
+            <div class="step-container">
+                <div class="circle">
+                    <div class="inner-circle">
+                        <div class="inner-circle1">
+                            <span class="number">2</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="header-right">Работы модельеров и их биография</p>
+                <p class="description">
+                    Изучение английских модельеров, таких как Чарльз Фредерик, Лора Эшли и Брюс Олдфилд,
+                    погружает в мир смелых экспериментов и утонченного кроя. Фредерик прославился созданием прямых линий
+                    и элегантных силуэтов, которые подчеркнули женственность и утонченность;
+                    у Лоры Эшли наиболее известна своими романтичными платьями с цветочными принтами, тканями для дома
+                    (обои, шторы, постельное белье) и общим стилем “cottagecore” или “английский кантри”;
+                    а Брюс Олдфилд известен своими роскошными вечерними платьями, коктейльными нарядами и свадебными
+                    платьями. Он также разрабатывал дизайн одежды для театра и кино.
+                    Все они стремятся к индивидуальности и новаторству, нарушая правила и
+                    создавая запоминающийся стиль.
+                </p>
+            </div>
+
+            <!-- Третий шаг -->
+            <div class="circle">
+                <div class="inner-circle">
+                    <div class="inner-circle1">
+                        <span class="number">3</span>
+                    </div>
+                </div>
+            </div>
+            <p class="header-left">Что из себя представляет устойчивая мода</p>
+            <p class="description">
+                Английские модельеры важны для устойчивого развития модной индустрии, используя экологически чистые
+                материалы, такие как органический хлопок и переработанный полиэстер. Устойчивые моды - важная тема в
+                науке и технике, изучающая поведение систем при малых возмущениях.
+                Основные аспекты включают: саму моду, создание математической модели системы,
+                линейный анализ для оценки устойчивости, исследование условий стабильности мод и применение результатов
+                для улучшения дизайна и прогнозирования поведения.
+            </p>
+        </div>
+    </div>
+    <div class="glava1">
+        <div class="zagolovok">
+            <span>Как мода повлияла на культуру</span>
+        </div><br>
+
+        <div class="kvadrat_moda_container">
+            <div class="kvadrat">
+                <img id="ban" src="https://avatars.mds.yandex.net/i?id=b07b16ad4424182621f3a70b76fcab9c_l-4011439-images-thumbs&amp;ref=rim&amp;n=13&amp;w=575&amp;h=800" alt="1">
+            </div>
+            <div class="moda">
+                <p>Формирование британского стиля в моде – это сложный и многогранный процесс, охватывающий несколько
+                    столетий и отражающий политические, социальные, экономические и культурные изменения в
+                    Великобритании. Ключевую роль в этом процессе сыграло историческое наследие, которое сформировало
+                    уникальные черты британской моды и сделало её узнаваемой во всем мире.<br><br>
+                    Британская аристократия и королевская семья всегда оказывали большое влияние на моду, устанавливая
+                    стандарты и определяя тренды. Любовь англичан к спорту, таким как охота, гольф и верховая езда,
+                    привела к появлению спортивной одежды, которая впоследствии вошла в повседневный гардероб, к
+                    примеру, твидовые костюмы и вязаные свитера. Англия славится традиционными тканями и материалами:
+                    твидом, шерстью и кашемиром, используемыми для создания классической одежды. Особенно узнаваемым
+                    символом британской моды является клетка, включая тартан, которая используется в юбках, пиджаках и
+                    пальто. Британский климат, с его дождливостью и переменчивостью, также оказал влияние на создание
+                    практичной одежды, к которой относятся тренчкоты, резиновые сапоги и зонты.<br><br>
+                </p>
+
+            </div>
+        </div>
+        <div class="kvadrat1_moda1_container">
+            <div class="moda1">
+                <p>Британская мода, в отличие от консервативных модных течений, всегда славилась своей способностью к
+                    самовыражению, инновациям и бунтарству. Молодежные субкультуры стали мощным двигателем этих
+                    процессов, оказывая огромное влияние на моду и на всю культуру Великобритании и мира. Молодежь
+                    посредством моды выражала протест, формировала идентичность и бросала вызов устоявшимся
+                    нормам.<br><br>
+                    В 1970-е панк-рок выражал протест через рваную одежду, кожу и шипы. Новая волна и нью-романтики в
+                    1980-е стремились к утонченности, используя яркий макияж и романтические элементы. Рейв-культура
+                    конца 1980-х и начала 1990-х продвигала свободу, одеваясь в спортивную одежду с кислотными принтами.
+                    Гранж в начале 1990-х стал анти-модой, отдавая предпочтение рваным джинсам и фланелевым рубашкам.
+                    Эти субкультуры значительно повлияли на британскую моду, сделав её более доступной и демократичной,
+                    а тренды, зародившиеся в них, проникли в высокую моду и стали популярными во всем мире. Они
+                    расширяют границы моды, превращая её в средство самовыражения и протеста.<br><br></p>
+            </div>
+            <div class="kvadrat1">
+                <img id="ban" src="https://mediaproxy.salon.com/width/960/https://media2.salon.com/2020/01/punks-of-the-1970s-0117201.jpg" alt="2">
+            </div>
+        </div>
+
+        <div class="kvadrat2_moda2_container">
+            <div class="kvadrat2">
+                <img id="ban" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/ARA_1809_V01_D234_Harding%2C_Howell_%26_Co_premises.jpg" alt="3">
+            </div>
+            <div class="moda2">
+                <p>Эстетика Великобритании обязана своей уникальностью и мировым признанием не только историческому
+                    наследию и
+                    влиянию молодежных субкультур, но и таланту, смелости и новаторству выдающихся дизайнеров. Именно
+                    они, своей креативностью и видением, формировали и продолжают формировать облик британской моды,
+                    определяя её направления и тенденции.<br><br>
+                    Без таланта выдающихся дизайнеров английская мода не была бы такой яркой. Дизайнеры, такие как
+                    Чарльз Фредерик Уорт, Мэри Куант, Вивьен Вествуд, Александр Маккуин, Стелла Маккартни и Джон
+                    Гальяно, привнесли в моду не только свои уникальные видения, но и значимые инновации.<br><br>
+                    Дизайнеры, привнося свои уникальные стили и видения в моду, не только определили ее направления, но
+                    и помогли британской моде стать мощной культурной силой. Они продемонстрировали, что мода — это не
+                    просто одежда, а сложная сеть символов, историй и идей, позволяющая людям выражать свою самобытность
+                    и отражать общественные изменения.</p>
+            </div>
+        </div>
+
+        <div class="kvadrat3_moda3_container">
+            <div class="moda3">
+                <p>Английская мода, как и мода любой другой страны, не существует в вакууме. Она тесно переплетена с
+                    национальной идентичностью и историческими стереотипами, которые формировались на протяжении
+                    столетий. Эти элементы влияют на создание уникального британского стиля, делая его узнаваемым и
+                    отличным от других.<br><br>
+                    Твид: Этот прочный шерстяной материал ассоциируется с загородным стилем и аристократией. Твидовые
+                    пиджаки, пальто и юбки символизируют охоту, верховую езду и традиционный образ жизни.
+                    Клетка (Tartan, Plaid): Шотландский тартан с разнообразием цветовых сочетаний и клановой историей
+                    стал символом принадлежности к Шотландии и британской культуре. Используется в килтах, шарфах,
+                    пледах и других предметах одежды.<br><br>
+                    Английский джентльмен: Стереотип об элегантном, вежливом и сдержанном джентльмене отражается в
+                    классическом мужском стиле, включающем костюмы, пальто, шляпы и качественную обувь.
+                    Английская леди: Стереотип об изысканной, образованной и воспитанной леди воплощён в женственной и
+                    элегантной моде, включающей платья, юбки, блузки и аксессуары.</p>
+            </div>
+            <div class="kvadrat3">
+                <img id="ban" src="
+                    https://sun6-22.userapi.com/s/v1/if1/neD8v0U7wmvq9TQ6o6hCsuOAIhDI5YLeg90iKTvFt7QzstECLQBZ0wcrEAyccVEjwAwyxjSR.jpg?size=881x882&amp;quality=96&amp;crop=319,41,881,882&amp;ava=1" alt="4">
+            </div>
+        </div>
+
+        <div class="kvadrat4_moda4_container">
+            <div class="kvadrat4">
+                <!-- Изображение теперь будет занимать весь квадрат -->
+                <img id="ban" src="https://i.pinimg.com/736x/46/8f/a0/468fa067bdb28100677a08637edd9a7a.jpg" alt="5">
+            </div>
+            <div class="moda4">
+                <p>Британская мода – мощный культурный феномен, влияющий на другие искусства. В кино мода создает
+                    персонажей, атмосферу, определяет эпоху, дизайнеры сотрудничают с режиссерами, а фильмы транслируют
+                    тренды. В литературе мода описывает персонажей, создает атмосферу, служит символом. В музыке мода
+                    формирует имидж исполнителей, связана с субкультурами, важна в клипах, бренды спонсируют мероприятия
+                    и сотрудничают с музыкантами. В изобразительном искусстве художники изображают одежду, дизайнеры
+                    черпают вдохновение, мода становится искусством, устраиваются выставки. В театре мода создает образы
+                    персонажей, обеспечивает соответствие эпохе, создает визуальный эффект.<br><br>
+                    Взаимосвязь моды и искусства – это живой диалог, где искусство служит неисчерпаемым источником идей
+                    для дизайнеров, которые, вдохновляясь живописью, скульптурой или литературой, создают уникальные
+                    коллекции. В свою очередь, мода, с ее инновационными формами, материалами и смелыми решениями,
+                    находит отражение в кинематографе, театре и фотографии, формируя визуальную культуру и вдохновляя
+                    художников на создание новых произведений. Этот постоянный обмен идеями и образами обогащает оба
+                    мира, стирая границы между утилитарным и прекрасным. </p>
+            </div>
+        </div>
+    </div>
+    <div class="glava2">
+        <div class="section">
+            <div class="zagolovok1">
+                <span>Работы модельеров и их биография</span>
+            </div><br>
+            <div class="figure">
+                <img id="foto" src="https://bor72.ru/wp-content/uploads/4/f/6/4f602ef342ec5055efb00eda42c70acc.jpeg" alt="Уорт">
+            </div>
+            <div class="text-block">
+                <p>
+                    Уорт родился в Линкольшире (Англия) в семье стряпчего. Из-за бедности семьи начал работать с 11 лет
+                    в типографии. В 12 лет, благодаря своим способностям, стал подмастерьем в лондонском универмаге
+                    "Swan &amp; Edgar", где, вероятно, заинтересовался модой, наблюдая за элегантными дамами.<br><br>
+                    Чарльз Фредерик Уорт известен своими роскошными и изысканными нарядами, которые сочетали в себе
+                    элементы викторианского стиля с современными тенденциями. Он активно использовал дорогие ткани,
+                    сложные крои и ручную отделку, что придавало его работам уникальность и элегантность. Его
+                    работодатели были впечатлены и позволили ему открыть студию в магазине. С этого момента родился "Дом
+                    Ворта". <br><br>
+                    В своих коллекциях Уорт использовал дорогие ткани, такие как шелк и бархат, и уделял большое
+                    внимание каждой детали, включая отделку, шитье и украшения.<br><br>
+                    Клиенты Ворта ценили его модели не только за их красоту, но и за то, что Ворт изменил моду так, что
+                    она стала более "носибельной". По предложению императрицы Евгении он создал "дневное платье" -
+                    платье, которое едва доходило до щиколотки. В то время оно было немного скандальным, но, тем не
+                    менее, стало очень популярным благодаря своей невероятно практичной форме.<br><br>
+                    Чарльз Фредерик Уорт считается одним из наиболее влиятельных модельеров своей эпохи, и его вклад в
+                    развитие модной индустрии остается актуальным и в современном мире. Умер он 10 марта 1899 года в
+                    Париже, оставив после себя огромное наследие, которое продолжает вдохновлять дизайнеров и модников
+                    по всему миру.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="figure">
+                <img id="foto" src="https://yandex-images.clstorage.net/5dTJC1214/4d268byjHMq/eQj5HWYyOpqooIVd6e-tWnhtoxhzPYvu2cvXU-1WujMwGoPb-q_GrF_zNBdnbdVCXoCQN1m3KDdTtYeQ8gvneu0YrU03cvuY7DLCWXkrrhkorqaM4LyYOltL1VLi2CdteBRdAvHwDDOMsmKCsn_GUs2a32cFPvNjDumA1uWd-qW8z3ddo2y7VupxSZBs7aBUqCujmyv11m0Z0QpGqF1l5_FQlU67MEJ9g7bqSLO8G9hCXx31QrK_bAbiwN8jVnUj-oC0WWag-5hpMErYaeqpVylrY1DhcVnk0V0MT-Zeoaa40VMCeriNOkZ8qM5xctZSjZNc88z3N-JMbMXX4lo3qrCNv12so_1aprFIkKtiJJhtaGzTIjQX5ZLZAMcpm6dsNt7cRfm0yPsOf6TG9jWRlA3RFf6G8n0hTS2Ily2dtml9C_tSqCTz2S57RVljL-kfIqRpFSq216ZT0IJIqRsj5HnbVEf4d0O8yP9nTbe6kJBMmRozjbx-JI4hAB8skb3nvQO7EyKk8FbqfwLeLCYk1mni656k9dxv2BRNiigRqW4yF5dP83pOMwo-70j2clGUCtlYfQ03M6lHYkxTa9P1LjXMspgnLzMWprgFHGBnpdrrKCPRYD1X4hJWQ8xvkupmeFDTz751Dr2CMOQL8rWYnMicVvsFPfuoS-3JkS3a_yO6if9dqODzH6D5gFMppG7abWBrUeg5nKxUn4vAr5JqbnAS006_sMI6y34ri_HwGVAGnZU3S3-zK4khxRjj07Ul88lw2KFjMJXm-QVfYGLokihrYpGuslRhGpQIiGlarKG50JZGuHGNckY34gPyvdVTTBQU-480t-rPJEtWahtxpbtD8JqoZDyW5vjCmWmk5torJSbb4n7fbdHaDw-u1uKreV9Syzr6TzLKsqCJ870e2sbZkH_Ld_suxq2FmGzUuGFxxrsdI2EzWag4QNfhZO3aaqwq0OB-laxQGYhNJc" alt="Эшли">
+            </div>
+            <div class="text-block">
+                <p>
+                    Эшли родилась в доме своей бабушки, в Доулейсе (Уэльс, Великобритания). Она выросла в семье
+                    государственного служащего и матери-домохозяйки как строгая баптистка. Часовня, которую она посещала
+                    в Доулэйсе (Хеврон), была валлийской.<br><br>
+                    В 1953 году Лора Эшли начала печатать викторианские узоры на шейных платках, вдохновленных фильмом
+                    “Римские каникулы”. Заказы росли, и Бернард оставил работу, чтобы вместе с Лорой основать компанию.
+                    Они производили кухонные полотенца, салфетки и скатерти. К середине 80-х это стало успешным семейным
+                    бизнесом с 4000 сотрудниками и 220 магазинами по всему миру. Одежда изготавливалась из натуральных
+                    тканей.Компания, изначально названная Ashley Mountney, была переименована в Laura Ashley. В 1961
+                    году они открыли свой первый розничный магазин в Махинллете, продавая товары Лоры Эшли, а также
+                    другие предметы. Там же Лора начала разрабатывать первые модели одежды. Первый магазин, торгующий
+                    только продукцией Laura Ashley, открылся в Лондоне в 1968 году. Принцесса Диана была известной
+                    поклонницей бренда.В 1980-х компания расширила ассортимент и стала продавать товары для дома в
+                    едином стиле.<br><br>
+                    В 1985 году, сразу после своего 60-летия, Лора Эшли упала с лестницы в доме дочери в Уэст-Мидлендсе
+                    и была доставлена в больницу в Ковентри, где через десять дней скончалась от кровоизлияния в мозг.
+                    Она похоронена на кладбище Святого Иоанна Крестителя в Карно, Уэльс.<br><br>
+                    Через два месяца после смерти Лоры Эшли в 1985 году компания стала публичной. В 1994 году на бывшем
+                    доме семьи Эшли в Пимлико была установлена мемориальная доска. В 2022 году бренд Laura Ashley
+                    остается популярным, охватывая широкий спектр товаров, от одежды до товаров для дома, и продается в
+                    тысячах торговых точках по всему миру.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="figure">
+                <img id="foto" src="https://www.ok-magazine.ru/images/cache/2021/3/29/heighten_527_crop_5150_3433_0_0_q90_774491_c94f466c304ed63fee2cd22ff.jpeg" alt="Брюс">
+            </div>
+            <div class="text-block">
+                <p>
+                    Брюс Олдфилд родился 4 июня 1950 года в Лондоне, Великобритания. С юных лет он проявлял интерес к
+                    моде и дизайну. Его воспитывали приемные родители в семье рабочих. Его биологическая мать была
+                    ирландкой, а отец – ямайцем.<br><br>
+                    В начале своей карьеры Олдфилд работал в различных модных домах, где приобретал опыт и развивал свои
+                    навыки. В 1970-х годах он основал свой собственный бренд, который быстро стал популярным благодаря
+                    уникальным и стильным коллекциям. Олдфилд известен своей способностью создавать платья, которые
+                    подчеркивают фигуру, используя высококачественные ткани и сложные крои. Его работы сочетали в себе
+                    классические и современные элементы, что сделало их востребованными среди множества
+                    клиентов.<br><br>
+                    Брюс Олдфилд стал особенно известен благодаря своим нарядам, которые носили такие знаменитости, как
+                    Принцесса Диана, Мадонна, Аланис Мориссетт и многие другие. В 1980-х годах его работы начали активно
+                    использоваться на красных дорожках и в мире голливудских премий. Он также стал популярным дизайнером
+                    свадебных платьев, благодаря своему уникальному стилю и вниманию к деталям. Многие невесты выбирали
+                    его творения для своего самого важного дня.<br><br>
+                    С течением времени Брюс Олдфилд зарекомендовал себя как один из самых влиятельных дизайнеров в мире
+                    моды. Его работы продолжают вдохновлять новых дизайнеров и привлекать внимание модных критиков.
+                    Олдфилд также известен своей благотворительной деятельностью и активным участием в различных
+                    социальных проектах, что еще больше укрепило его репутацию как выдающегося модного художника.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="glava3">
+        <div class="zagolovok2">
+            <span>Что из себя представляет устойчивая мода</span>
+        </div><br>
+        <div class="container-pramoygolniki">
+            <div class="pramoygolniki">
+                <div class="pramoygolniki1">
+                    <!-- Здесь будет ваше изображение -->
+                    <img id="opa" src="https://pm1.aminoapps.com/7560/a95df6dc6f692c9371dd96aed628eee882e0b106r1-720-552v2_hq.jpg" alt="Изображение 1">
+                </div>
+                <div class="omg">
+                    <p>Экологически ответственное производство:</p>
+                </div>
+                <div class="omg1">
+                    <p>Экологически ответственное производство является краеугольным камнем устойчивой моды в
+                        Великобритании, охватывая широкий спектр практик, направленных на минимизацию негативного
+                        воздействия на окружающую среду на всех этапах жизненного цикла одежды – от выращивания или
+                        добычи сырья до производства, транспортировки, использования и утилизации. Это включает в себя
+                        использование экологически чистых материалов, таких как органический хлопок, заменяющий
+                        традиционный хлопок, выращиваемый с применением большого количества пестицидов и воды, и
+                        органический хлопок, который выращивается без химических удобрений и пестицидов, с соблюдением
+                        принципов сохранения почвы и биоразнообразия. <br><br>
+                        Также применяется переработанные ткани, например, переработанный полиэстер (rPET) из пластиковых
+                        бутылок, переработанный хлопок из текстильных отходов и другие переработанные материалы для
+                        снижения потребности в новых ресурсах и сокращения отходов, и инновационные материалы,
+                        разрабатываемые и используемые на основе растительных волокон, таких как волокна из ананасовой
+                        кожуры (Piñatex), грибного мицелия, водорослей и других устойчивых источников, которые могут
+                        предложить альтернативу традиционным тканям с меньшим экологическим следом. Кроме того,
+                        применяются экологически чистые методы производства, например сокращение выбросов CO2 за счет
+                        использования энергоэффективного оборудования, перехода на возобновляемые источники энергии
+                        (солнечная, ветровая) и оптимизация логистики, а также минимички поставок. <br><br>
+                        Принципы круговой экономики, такие как создание долговечной одежды, которая не станет быстро
+                        устаревать и отправляться на свалку, достигается за счет использования качественных материалов,
+                        прочной конструкции и классического дизайна, а также поощрение ремонта и переделки одежды для
+                        продления ее срока службы. Важную роль играют стандарты и сертификации, такие как GOTS (Global
+                        Organic Textile Standard) для органического текстиля, который охватывает все этапы производства
+                        – от выращивания сырья до изготовления готовой продукции, и OEKO-TEX Standard 100, гарантирующий
+                        отсутствие вредных химических веществ в текстильных изделиях.
+                    </p>
+                </div>
+            </div>
+            <div class="pramoygolniki">
+                <div class="pramoygolniki1">
+                    <!-- Здесь будет ваше изображение -->
+                    <img id="opa" src="https://i.pinimg.com/originals/ff/17/70/ff177090b794495f13b9ea1fb28836af.jpg" alt="Изображение 2">
+                </div>
+                <div class="omg">
+                    <p>Этические аспекты и социальная ответственность:</p>
+                </div>
+                <div class="omg1">
+                    <p>Программы, инициативы по охране здоровья и проекты по развитию инфраструктуры. Устойчивая мода в
+                        Великобритании также акцентирует внимание на важности использования местных материалов и
+                        ресурсов, способствуя развитию местных экономик и снижению углеродного следа, связанного с
+                        транспортировкой. Одним из ключевых аспектов устойчивой моды является снижение отходов. Бренды
+                        принимают меры по снижению количества излишков производства, разрабатывая коллекции, которые
+                        основаны на принципах «меньше — значит больше» и «круговой экономики». Например, используются
+                        переработанные материалы и предлагаются сервисы по ремонту и переработке одежды, чтобы продлить
+                        срок службы изделий и минимизировать количество выброшенных вещей.<br><br>
+                        Важной частью устойчивой моды является привлечение внимания потребителей к вопросам этики и
+                        экологии. Бренды стремятся информировать своих клиентов о воздействии их покупок на окружающую
+                        среду и социальный контекст производства, предлагая альтернативы, такие как аренда, обмен
+                        одеждой и покупка вторичной одежды. Таким образом, они способствуют смене менталитета
+                        потребителей с быстрого модного потребления на более вдумчивый и осознанный подход к покупкам.
+                        <br><br>
+                        Кроме того, устойчивые бренды часто ведут активную работу по повышению осведомленности о важных
+                        социальных и экологических вопросах через кампании в социальных сетях, сотрудничество с
+                        активистами и некоммерческими организациями, а также участие в общественных дискуссиях. Они
+                        стремятся создать сообщества, в которых поступки и выбор каждого человека могут приводить к
+                        позитивным изменениям.
+
+                        В итоге, устойчивая мода в Великобритании становится не просто тенденцией, а философией, которая
+                        объединяет экологические, социальные и экономические аспекты, создавая продуктивные и
+                        ответственные отношения между брендами, производителями и потребителями.
+                    </p>
+                </div><br>
+            </div>
+            <div class="pramoygolniki2">
+                <div class="pramoygolniki3">
+                    <!-- Здесь будет ваше изображение -->
+                    <img id="opa" src="https://mylitta.ru/uploads/posts/2014-01/1389600266_vintage-fashion-19.jpg" alt="Изображение 3">
+                </div>
+                <div class="omg">
+                    <p>Потребительское поведение и экономическая модель:</p>
+                </div>
+                <div class="omg1">
+                    <p>Осознанное потребление: Потребители становятся более осознанными в отношении экологических и
+                        социальных последствий своих покупок. Они задают вопросы о происхождении одежды, условиях труда
+                        на фабриках и воздействии на окружающую среду. Инвестиции в качество: Потребители готовы платить
+                        больше за одежду,
+                        изготовленную из экологически чистых материалов, произведенную в соответствии с этическими
+                        принципами и имеющую длительный срок службы. Интерес к подержанной одежде: Растет популярность
+                        магазинов секонд-хенд, винтажной одежды и онлайн-платформ для перепродажи одежды, что
+                        способствует продлению срока службы одежды и сокращению отходов.<br><br>
+                        Экономика совместного потребления: Развитие платформ для аренды одежды, обмена одеждой и
+                        перепродажи подержанных вещей, что позволяет потребителям получать доступ к разнообразной одежде
+                        без необходимости ее приобретать. Устойчивый дизайн: Разработка одежды, которая легко
+                        ремонтируется, перерабатывается и разлагается в конце срока службы. Прозрачность и
+                        отслеживаемость: Использование технологий блокчейн и других методов для обеспечения прозрачности
+                        цепочки поставок, чтобы потребители могли узнать, где и кем была произведена их одежда.
+                        Справедливая цена: Обеспечение справедливой цены как для производителей, так и для потребителей,
+                        чтобы гарантировать достойные условия труда и устойчивое развитие бизнеса.<br><br>
+                        Поддержка устойчивых инноваций: Государство может поддерживать исследования и разработки в
+                        области устойчивых материалов, технологий и бизнес-моделей. Разработка стандартов и
+                        сертификаций: Создание четких стандартов и сертификаций для устойчивой одежды, чтобы помочь
+                        потребителям делать осознанный выбор. Продвижение устойчивого образования: Включение тем
+                        устойчивой моды в образовательные программы, чтобы повысить осведомленность потребителей и
+                        будущих дизайнеров. Стимулирование устойчивого производства: Государство может предоставлять
+                        налоговые льготы и другие стимулы для компаний, которые внедряют устойчивые практики. Борьба с
+                        “зеленым отмыванием”: Государство должно бороться с компаниями, которые используют ложную
+                        рекламу, чтобы представить себя более экологичными, чем они есть на самом деле.</p>
+                </div>
+            </div>
+            <div class="pramoygolniki2">
+                <div class="pramoygolniki3">
+                    <!-- Здесь будет ваше изображение -->
+                    <img id="opa" src="https://i.pinimg.com/736x/95/fd/17/95fd173c0230ccca70316025e19c48d4--frock-coat-bonnets.jpg" alt="Изображение 4">
+                </div>
+                <div class="omg">
+                    <p>Ключевые игроки и инициативы:</p>
+                </div>
+                <div class="omg1">
+                    <p>В Великобритании устойчивая мода активно продвигается рядом ключевых игроков и инициатив,
+                        охватывающих дизайнеров, бренды, организации и программы, направленные на трансформацию
+                        индустрии в сторону более экологичных и этичных практик. Ведущими дизайнерами и брендами,
+                        пропагандирующими устойчивость, являются Stella McCartney, Vivienne Westwood, Christopher
+                        Raeburn, Bethany Williams, Mother of Pearl и Patrick McDowell. Эти деятели используют
+                        органические, переработанные и инновационные материалы, применяют экологически чистые методы
+                        производства и поддерживают кампании по борьбе с изменением климата, призывая потребителей к
+                        осознанному потреблению.<br><br>
+                        Среди ключевых организаций и инициатив, поддерживающих устойчивую моду, выделяются The
+                        Sustainable Angle, The British Fashion Council (BFC), The Waste and Resources Action Programme
+                        (WRAP), Fashion Revolution, Centre for Sustainable Fashion (CSF) at London College of Fashion и
+                        Ellen MacArthur Foundation. Эти структуры занимаются продвижением экологически чистых материалов
+                        и технологий, обеспечивают прозрачность цепочек поставок, предлагают образовательные программы и
+                        проводят исследования, способствующие созданию более устойчивого будущего для моды.<br><br>
+                        Программы и инициативы, такие как Sustainable Clothing Action Plan (SCAP), The Circular Fashion
+                        Fast Forward (CFF) и Textile 2030, направлены на сокращение воздействия одежды на окружающую
+                        среду, ускорение перехода к круговой моде и достижение целей по снижению воздействия текстиля на
+                        окружающую среду к 2030 году. Эти усилия формируют более устойчивую и этичную модную индустрию в
+                        Великобритании, влияя на дизайнеров, бренды, потребителей и политику, и вдохновляют другие
+                        страны на переход к более ответственному подходу к одежде.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="a">
+        <div id="b">
+            <span>Список использованных источников:</span>
+        </div>
+        <div id="c">
+            <ol> <!-- Используем нумерованный список для источников -->
+                <li><a href="https://goverment.esrae.ru/ru/120-991">Влияние глобальных тенденций развития английской
+                        моды на общество.</a> Дата обращения: 10.03.2025</li>
+                <li><a href="https://school-science.ru/9/3/44670">Мода в Англии раньше и сейчас.</a> Дата обращения:
+                    10.03.2025</li>
+                <li><a href="http://urok-kultury.ru/wp-content/uploads/2021/04/">История развития британской моды.</a>
+                    Дата обращения: 11.03.2025</li>
+                <li><a href="https://ru.wikipedia.org/wiki/">Уорт, Чарльз Фредерик.</a> Дата обращения: 11.03.2025</li>
+                <li><a href="https://www.brandsvillage.ru/blogs/journal/modnye-korni-istoriya-pervogo-doma-mody-i-ego-tvortsa">Модные
+                        корни: История первого Дома Моды и его творца.</a> Дата обращения: 11.03.2025</li>
+                <li><a href="https://ru.ruwiki.ru/wiki/%D0%A3%D0%BE%D1%80%D1%82,_%D0%A7%D0%B0%D1%80%D0%BB%D1%8C%D0%B7_%D0%A4%D1%80%D0%B5%D0%B4%D0%B5%D1%80%D0%B8%D0%BA">Уорт
+                        Чарльз Фредерик — Рувики: Интернет-энциклопедия.</a> Дата обращения: 11.03.2025</li>
+                <li><a href="https://ru.wikipedia.org/wiki/%D0%AD%D1%88%D0%BB%D0%B8,_%D0%9B%D0%BE%D1%80%D0%B0">Эшли,
+                        Лора — Википедия.</a> Дата обращения: 12.03.2025</li>
+                <li><a href="https://www.livemaster.ru/topic/3304596-article-kak-laura-ashley-perevernula-mir-i-sdelala-vintazh-modnym">Как
+                        Laura Ashley перевернула мир и сделала винтаж модным.</a> Дата обращения: 12.03.2025</li>
+                <li><a href="https://translated.turbopages.org/proxy_u/en-ru.ru.757330b5-67d85700-d14f64b6-74722d776562/https/en.wikipedia.org/wiki/Laura_Ashley_(company)">Лора
+                        Эшли — основатель бренда Laura Ashley.</a> Дата обращения: 12.03.2025</li>
+                <li><a href="https://translated.turbopages.org/proxy_u/en-ru.ru.78789585-67d85393-89e54c23-74722d776562/https/en.wikipedia.org/wiki/Bruce_Oldfield">Bruce
+                        Oldfield - Wikipedia.</a> Дата обращения: 13.03.2025</li>
+                <li><a href="https://www.vogue.co.uk/article/bruce-oldfield-biography">Биография Брюса Олдфилда |
+                        Британский Vogue | Британский Vogue.</a> Дата обращения: 13.03.2025</li>
+                <li><a href="https://www.hellomagazine.com/profiles/20101203987/bruce-oldfield/">Брюс Олдфилд -
+                        Биография | HELLO!</a> Дата обращения: 14.03.2025</li>
+                <li><a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B0">Устойчивая
+                        мода — Википедия.</a></li>
+                <li><a href="https://www.kommersant.ru/doc/4038431">Не просто тренд – Стиль.</a> Дата обращения:
+                    14.03.2025</li>
+                <li><a href="https://profashion.ru/guide/ustoychivaya-moda-sustainable-fashion/">Устойчивая мода
+                        (sustainable fashion).</a> Дата обращения: 15.03.2025</li>
+                <li><a href="https://burdastyle.ru/stati/chto-takoe-ustojchivaya-moda-i-chem-ona-interesna-tomu-kto-shyot-/">Что
+                        такое устойчивая мода и чем она интересна тому, кто шьет.</a> Дата обращения: 15.03.2025</li>
+                <li><a href="https://www.shoppingschool.ru/articles/chto-takoe-ustoychivaya-moda-i-ustoychivoe-razvitie.html">Что
+                        такое устойчивая мода и устойчивое развитие / Школа.</a> Дата обращения: 16.03.2025</li>
+                <li><a href="https://ru.ruwiki.ru/wiki/%D0%A3%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B0">Устойчивая
+                        мода — Рувики: Интернет-энциклопедия.</a> Дата обращения: 16.03.2025</li>
+            </ol>
+        </div>
+    </div>
+    <div id="koncovka">
+        <div id="koncovka1">
+            <img id="logo1" src="https://i.pinimg.com/originals/ea/0a/dc/ea0adc75f35c064cdbe96ff6d21c53a3.jpg" alt="Конец">
+            <div id="koncovka2">
+                <div class="menu1">
+                    <a href="#">Спасибо, что вместе со мной узнали об английской моде и людях, которые её создают!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+
+</body></html>
